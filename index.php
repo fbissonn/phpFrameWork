@@ -1,7 +1,7 @@
 
 <?php
 /**
- * File:   index.php
+ * File:   cInputBoxes.php
  * Author: Francois Bissonnette <fbissonn@gmail.com>
  * 
  * Created on 2011-11-05, 09:31:47

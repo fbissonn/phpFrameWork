@@ -60,6 +60,17 @@
             }
             $cptValue++;            
         }
+        else
+        {
+          if($cptValue == 1)
+          {
+            $value = $value . "'NOTHING TO ADD !!!'";
+          }
+          else
+          {
+            $value = $value . ",'NOTHING TO ADD !!!'";
+          }  
+        }
       }
     }
     if($cptValue != 0)

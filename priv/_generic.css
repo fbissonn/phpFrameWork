@@ -1,0 +1,160 @@
+/**
+ * File:   _generic.php
+ * Author: Francois Bissonnette <fbissonn@gmail.com>
+ * 
+ * Created on 2011-11-05, 09:31:47
+ * 
+ * Copyright (c) <2011>, <Francois Bissonnette <fbissonn@gmail.com>>
+ * 
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *  * Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *  * Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *  * Neither the name of the Francois bissonnette nor the
+ *    names of its contributors may be used to endorse or promote products
+ *    derived from this software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL FRANCOIS BISSONNETTE BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ * 
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+form.cssform textarea {
+        width: 85%;
+        height: 85%;
+        border: 2px solid #cccccc;
+        padding: 5px;
+        font-family: Tahoma, sans-serif;        
+        background-position: bottom right;
+        background-repeat: no-repeat;
+}
+
+form.cssform select {
+        width: 85%;
+
+}
+form.cssform legend
+{
+    font-weight:bold;
+}
+
+form.cssform fieldset
+{
+    padding: 1em;
+    border-style: 1;
+    height:95%;
+}
+
+form.cssform label
+{
+    border-style:none;
+    display: inline;
+    float: left;
+    width: 15%;
+} 
+
+
+form.cssform input[type="text"]{ /*width of text boxes. IE6 does not understand this attribute*/
+    width: 85%;
+}
+form.cssform input[type="select"]{ /*width of text boxes. IE6 does not understand this attribute*/
+    width: 85%;
+}
+
+input[type=submit], input[type=reset] {
+    border:2px outset #A6BEDE;
+    font-weight:bold;
+    cursor:pointer;
+}
+input[type=submit]:hover, input[type=reset]:hover {
+    border:2px outset white;
+    background-color:white;
+}
+input[type=submit]:active, input[type=reset]:active {
+    border:2px inset #A6BEDE;
+    background-color:#A6BEDE;
+    color:black;
+}
+
+div {
+    text-align:center;
+}
+div#menu {
+    text-align:left;
+    float:left;
+    width:20%;
+    height:85%;
+    background-color:#FFFFFF;
+    border-style: solid;
+    border-width:1px;
+}
+div#contenu {
+    float:right;
+    width:75%;
+    height:85%;
+    background-color:#FFFFFF;
+}
+
+th.errorPHPstyle{
+	border: 2px solid #444;
+	font-family : verdana;
+	font-size : 12pt;
+	background-color:#9999CC;
+	color : #000000;
+	text-align: left;
+}  
+  td.errorPHPstyle{
+	border: 2px solid #444;
+	font-family : verdana;
+	font-size : 8pt;
+	background-color:#CCCCFF;
+	color : #000000;
+	text-align: left;
+}
+
+th.errorMYSQLIstyle{
+	border: 2px solid #444;
+	font-family : verdana;
+	font-size : 12pt;
+	background-color:#CC99CC;
+	color : #000000;
+	text-align: left;
+}  
+  td.errorMYSQLIstyle{
+	border: 2px solid #444;
+	font-family : verdana;
+	font-size : 8pt;
+	background-color:#33CCFF;
+	color : #000000;
+	text-align: left;
+}
+th.optimisePage{
+	border: 2px solid #444;
+	font-family : verdana;
+	font-size : 12pt;
+	background-color:#9999CC;
+	color : #000000;
+	text-align: left;
+} 
+  td.optimisePage{
+	border: 2px solid #444;
+	font-family : verdana;
+	font-size : 10pt;
+	background-color:#33CCFF;
+	color : #000000;
+	text-align: left;
+        ¨}
+
+

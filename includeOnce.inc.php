@@ -1,6 +1,6 @@
 <?
     /**
- * File:   includeOnce.inc.php
+ * File:   cMysql.class.php
  * Author: Francois Bissonnette <fbissonn@gmail.com>
  * 
  * Created on 2011-11-05, 09:31:47
@@ -37,9 +37,9 @@
     set_error_handler("GestionErreurs");
     require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/benchMark.class.php");
     require_once(getenv('DOCUMENT_ROOT'). "/_generic/priv/params.php");
-    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/cMysql.class.php");
+    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/Databases/cMysql.class.php");
     
-    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/cHTML.class.php");
-    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/cForm.class.php");
-    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/cPage.class.php");
+    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/HTML/cHTML.class.php");
+    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/HTML/cForm.class.php");
+    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/HTML/cPage.class.php");
 ?>
