@@ -55,7 +55,7 @@ $php_mail = 'fbissonn@gmail.com' ;
 function debug_mysqli($no_ligne,$script,$message) { 
 global $site_name, $webmaster, $mysqli_active_error, $mysqli_active_mail, $mysqli_mail, $mysqli_active_display;
     
-    if($mysqli_active_error) { // Si la fonction debug mysqli est activ�e !
+    if($mysqli_active_error) {
         $debug  = "<table>\n";
         $debug .= "<tr><th class=errorMYSQLIstyle>".$site_name."</th><th class=errorMYSQLIstyle>Erreur Mysqli</th></tr>\n";
         $debug .= "<tr><td class=errorMYSQLIstyle>Ligne</td><td class=errorMYSQLIstyle>". $no_ligne.".</td></tr>\n";
@@ -264,6 +264,8 @@ global $site_name, $webmaster, $php_active_error, $php_active_mail, $php_mail, $
         
         // Erreur utilisateur ? Je stoppe !
         if ($niveau_erreur == E_USER_ERROR) exit;
+        
+        return false;
 
     }
 }

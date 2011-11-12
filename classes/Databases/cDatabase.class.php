@@ -1,11 +1,11 @@
-<?PHP
+<?php
 /**
- * File:   cMysql.class.php
- * Author: Francois Bissonnette <fbissonn@gmail.com>
+ * File:   cDatabase.class
+ * Author: Francois Bissonnette
  * 
- * Created on 2011-11-05, 09:31:47
+ * Created on 2011-11-10
  * 
- * Copyright (c) <2011>, <Francois Bissonnette <fbissonn@gmail.com>>
+ * Copyright (c) <2011>, <Francois Bissonnette (fbissonn@gmail.com)>
  * 
  * All rights reserved.
  * 
@@ -32,9 +32,8 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-class cMysql
+class cDatabase
 {
-
     private $con;
     private $tab = array();
     private $result;
@@ -63,7 +62,7 @@ class cMysql
 
     public function qryWResults($sQry)
     {
-           require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/Errorhandler/errorhandler.php");
+           require_once(getenv('DOCUMENT_ROOT'). "/_generic/Tools/errorhandler.php");
         set_error_handler("GestionErreurs");
         $j = 0;
 
@@ -172,7 +171,6 @@ class cMysql
 
         $this->con->close() or die(debug_mysqli(__LINE__, __FILE__, $this->con->error));
     }
-
 }
 
 ?>

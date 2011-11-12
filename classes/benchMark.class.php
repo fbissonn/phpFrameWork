@@ -39,14 +39,14 @@ class BenchMark
 
     public function __construct() 
     { 
-        require_once(getenv('DOCUMENT_ROOT'). "/_generic/Tools/errorhandler.php");
+        require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/Errorhandler/errorhandler.php");
         set_error_handler("GestionErreurs");
         $this->total = $this->time = microtime(true);
     } 
     
     public function clock() 
     {
-        require_once(getenv('DOCUMENT_ROOT'). "/_generic/Tools/errorhandler.php");
+        require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/Errorhandler/errorhandler.php");
         set_error_handler("GestionErreurs");
         $this->formatDebug(-$this->time + ($this->time = microtime(true)));
         
@@ -54,21 +54,21 @@ class BenchMark
     
     public function elapsed() 
     { 
-        require_once(getenv('DOCUMENT_ROOT'). "/_generic/Tools/errorhandler.php");
+        require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/Errorhandler/errorhandler.php");
         set_error_handler("GestionErreurs");
         $this->formatDebug(microtime(true) - $this->total);
     } 
     
     public function reset() 
     {
-        require_once(getenv('DOCUMENT_ROOT'). "/_generic/Tools/errorhandler.php");
+        require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/Errorhandler/errorhandler.php");
         set_error_handler("GestionErreurs"); 
         $this->total=$this->time=microtime(true); 
     } 
     
     private function formatDebug($elapsed)
     { 
-      require_once(getenv('DOCUMENT_ROOT'). "/_generic/Tools/errorhandler.php");
+      require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/Errorhandler/errorhandler.php");
       set_error_handler("GestionErreurs");
       print("<table>\n");
       print("<tr><th>Temps pris pour charger la page</th></tr>");

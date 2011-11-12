@@ -43,7 +43,7 @@
     
     function createCon()
     {
-        require_once(getenv('DOCUMENT_ROOT'). "/_generic/Tools/errorhandler.php");
+        require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/Errorhandler/errorhandler.php");
         set_error_handler("GestionErreurs");
         require_once(getenv('DOCUMENT_ROOT'). "/_generic/priv/params.php");       
         global $SERVER;
@@ -56,7 +56,7 @@
     
     function createCustomForm($formName)
     { 
-        require_once(getenv('DOCUMENT_ROOT'). "/_generic/Tools/errorhandler.php");
+        require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/Errorhandler/errorhandler.php");
         set_error_handler("GestionErreurs");
         $this->createCon(); 
         //print("call `mydb`.`VIEWAFORM`('$formName');");

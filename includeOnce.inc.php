@@ -33,8 +33,8 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
     error_reporting(0);
-    require_once(getenv('DOCUMENT_ROOT'). "/_generic/Tools/errorhandler.php");
-    set_error_handler("GestionErreurs");
+    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/Errorhandler/errorHandler.class.php");
+    set_error_handler(array("errorHandler", "userErrorHandler"));
     require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/benchMark.class.php");
     require_once(getenv('DOCUMENT_ROOT'). "/_generic/priv/params.php");
     require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/Databases/cMysql.class.php");
