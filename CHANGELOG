@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 version 0.0.3
+=======
+version 0.0.2
+>>>>>>> 0.0.3
 -add CHANGELOG file;
 -new errorhandling class no need old errorhandling anymore, I'll let it there until full integration;
 -new cChart.class class, easy way to create/handle/show chart;
