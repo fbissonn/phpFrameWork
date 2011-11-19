@@ -1,11 +1,17 @@
-<?
-    /**
- * File:   cMysql.class.php
- * Author: Francois Bissonnette <fbissonn@gmail.com>
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * File:   %<%NAME%>%.%<%EXTENSION%>%
+ * Author: Francois Bissonnette
  * 
- * Created on 2011-11-05, 09:31:47
+ * Created on %<%DATE%>%, %<%TIME%>%
  * 
- * Copyright (c) <2011>, <Francois Bissonnette <fbissonn@gmail.com>>
+ * Copyright (c) <2011>, <Francois Bissonnette (fbissonn@gmail.com)>
  * 
  * All rights reserved.
  * 
@@ -32,13 +38,54 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-    namespace APP_GLOBAL;
-    
-    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/benchMark.class.php");
-    require_once(getenv('DOCUMENT_ROOT'). "/_generic/priv/params.php");
-    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/Databases/cMysql.class.php");
-    
-    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/HTML/cHTML.class.php");
-    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/HTML/cForm.class.php");
-    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/HTML/cPage.class.php");
+
+namespace APP_GLOBAL\WEB\WEBFORM\CHART;
+
+class cChart
+{
+
+    private $nbCol;
+    private $nbRow;
+    private $chartArray;
+    private $colTitle;
+    private $rowTitle;
+    private $title;
+
+    public function __construct()
+    {
+        $this->init();
+    }
+
+    private function init()
+    {
+        $this->nbCol = 0;
+        $this->nbRow = 0;
+        $this->chartArray = array();
+    }
+
+    function __construct($title, $chartValue=array())
+    {
+        $this->init();
+        $this->title = $title;
+
+        foreach ($chartValue as $i => $rowValue)
+        {
+            $this->nbRow++;
+           
+            if(isset($rowValue))
+            {
+                foreach ($rowValue as $j => $colValue)
+                {
+                    array_push(&$this->chartArray[$i], $colValue);
+                }
+            }
+            else
+            {
+                array_push(&$this->chartArray, $rowValue);
+            }
+        }
+    }
+
+}
+
 ?>

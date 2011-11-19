@@ -1,15 +1,16 @@
 <?php
-  /**
- * File:   cPage.class.php
- * Author: Francois Bissonnette <fbissonn@gmail.com>
+
+/**
+ * @name cPage.class.php
+ * @author Francois Bissonnette <fbissonn@gmail.com>
+ * @version Created on 2011-11-05, 09:31:47
+ * @copyright (c) <2011>, <Francois Bissonnette <fbissonn@gmail.com>> All rights reserved.
+ * @package APP_GLOBAL\WEB\WEBFORM\CPAGE
+ */
+/*
  * 
- * Created on 2011-11-05, 09:31:47
  * 
- * Copyright (c) <2011>, <Francois Bissonnette <fbissonn@gmail.com>>
- * 
- * All rights reserved.
- * 
- * Redistribution and use in source and binary forms, with or without
+ * @license Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
  *  * Redistributions of source code must retain the above copyright
  *    notice, this list of conditions and the following disclaimer.
@@ -31,31 +32,50 @@
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */  
-  class cPage extends cForm
-  {
+ */
+
+namespace APP_GLOBAL\WEB\WEBFORM\CPAGE;
+
+
+/**
+ * Used to create a custom web page using information provided by the database
+ * @package APP_GLOBAL\WEB\WEBFORM\
+ * @subpackage cPage()
+ */
+class cPage extends \APP_GLOBAL\WEB\WEBFORM\cForm
+{
+     /**
+     * @see cPage()
+     * @uses handling database connection.
+     * @var mixed 
+     * @access private
+     */
     private $con;
+    /**
+     * 
+     * @var type string keep the database name
+     */
     private $sDatabase;
-    
+
     function __construct($sDatabase)
-    {     
-       $this->sDatabase = $sDatabase;
+    {
+        $this->sDatabase = $sDatabase;
     }
-    
+
     function createPage($PageName)
     {
-        cHTML::addHeader($PageName);   
+        cHTML::addHeader($PageName);
         cHTML::addMenu($this->sDatabase);
         $this->doIt($PageName);
         cHTML::addFooter();
     }
-    
+
     function doIt($PageName)
     {
 
         cForm::createCustomForm($PageName);
-        
-        
     }
-  }
+
+}
+
 ?>

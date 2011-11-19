@@ -52,7 +52,7 @@ $php_mail = 'fbissonn@gmail.com' ;
 //==>
 ###################################################################################
 
-function debug_mysqli($no_ligne,$script,$message) { 
+/*function debug_mysqli($no_ligne,$script,$message) { 
 global $site_name, $webmaster, $mysqli_active_error, $mysqli_active_mail, $mysqli_mail, $mysqli_active_display;
     
     if($mysqli_active_error) {
@@ -142,7 +142,7 @@ global $site_name, $webmaster, $mysqli_active_error, $mysqli_active_mail, $mysql
         $debug .= '<br>Variable serveur SERVER_PROTOCOL: ' . getenv('SERVER_PROTOCOL');
         $debug .= '<br>Variable serveur SERVER_SOFTWARE: ' . getenv('SERVER_SOFTWARE');
         $debug .='<br><br><font color=grey><b>Une erreur est survenue pendant votre navigation sur ce site.<br>Pour obtenir plus d\'information, contactez <u>'.$mysqli_mail.'</u></b></font><br>';     
-        */
+        
         //mysqli_close(); // D�connexion de la BDD
         
         if($mysqli_active_mail) { // si l'envoi de mail est activ�, mail contenant l'erreur au format html
@@ -161,7 +161,7 @@ global $site_name, $webmaster, $mysqli_active_error, $mysqli_active_mail, $mysql
         }
 
     }
-} 
+} */
 
 
 function GestionErreurs ($niveau_erreur, $message, $script, $no_ligne, $contexte=array()) {
