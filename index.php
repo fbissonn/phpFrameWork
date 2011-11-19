@@ -33,8 +33,14 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+ 
     include(getenv('DOCUMENT_ROOT'). "/_generic/includeOnce.inc.php");
-
+    require_once(getenv('DOCUMENT_ROOT'). "/_generic/classes/Errorhandler/errorHandler.class.php");
+    set_error_handler(array('APP_GLOBAL\handlingError\errorHandler','GestionErreurs'));
+        
+   
+    
+   
     $whereIs = filter_input(INPUT_GET, 'where', FILTER_SANITIZE_STRING);
     
     
